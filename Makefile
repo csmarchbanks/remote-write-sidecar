@@ -1,5 +1,7 @@
 GO111MODULE ?= on
 GOOPTS := -mod=vendor
+DOCKER_REPO ?= quay.io/csmarchbanks/remote-write-sidecar
+DOCKER_TAG ?= latest
 
 all: vendor build test
 
@@ -16,4 +18,8 @@ vendor: go.mod go.sum
 
 .PHONY: docker-build
 docker-build:
-	docker build . -t csmarchbanks/remote-write-sidecar
+	docker build . -t $(DOCKER_REPO):$(DOCKER_TAG)
+
+.PHONY: docker-publish
+docker-publish: docker-build
+	docker push $(DOCKER_REPO):$(DOCKER_TAG)
