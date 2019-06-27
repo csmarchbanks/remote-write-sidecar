@@ -1,15 +1,19 @@
-.PHONY := build test docker
-
 GO111MODULE ?= on
 GOOPTS := -mod=vendor
 
-all: build test
+all: vendor build test
 
+.PHONY: build
 build:
 	GO111MODULE=$(GO111MODULE) go build $(GOOPTS) ./cmd/remotewrite
 
+.PHONY: test
 test:
 	GO111MODULE=$(GO111MODULE) go test $(GOOPTS) -race ./...
 
-docker:
+vendor: go.mod go.sum
+	GO111MODULE=$(GO111MODULE) go mod vendor
+
+.PHONY: docker-build
+docker-build:
 	docker build . -t csmarchbanks/remote-write-sidecar

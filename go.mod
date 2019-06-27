@@ -12,10 +12,9 @@ require (
 	github.com/onsi/ginkgo v1.8.0 // indirect
 	github.com/onsi/gomega v1.5.0 // indirect
 	github.com/pkg/errors v0.8.1
-	github.com/prometheus/client_golang v0.9.3
-	github.com/prometheus/common v0.4.0
-	github.com/prometheus/prometheus v2.10.0+incompatible
-	github.com/prometheus/tsdb v0.8.0
+	github.com/prometheus/client_golang v1.0.0
+	github.com/prometheus/common v0.4.1
+	github.com/prometheus/prometheus v0.0.0-20190627184821-06bdaf076f3d
 	github.com/samuel/go-zookeeper v0.0.0-20180130194729-c4fab1ac1bec // indirect
 	golang.org/x/net v0.0.0-20190403144856-b630fd6fe46b
 	golang.org/x/oauth2 v0.0.0-20190523182746-aaccbc9213b0 // indirect
@@ -28,5 +27,3 @@ require (
 )
 
 replace k8s.io/klog => github.com/simonpasquier/klog-gokit v0.1.0
-
-replace github.com/prometheus/prometheus => github.com/csmarchbanks/prometheus v0.0.0-20190601013940-ff4fbbe26355
