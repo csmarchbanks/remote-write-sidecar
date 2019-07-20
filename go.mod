@@ -5,6 +5,8 @@ go 1.12
 require (
 	github.com/aws/aws-sdk-go v1.19.41 // indirect
 	github.com/go-kit/kit v0.8.0
+	github.com/gogo/protobuf v1.2.1
+	github.com/golang/snappy v0.0.1
 	github.com/gophercloud/gophercloud v0.1.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.9.0 // indirect
 	github.com/miekg/dns v1.1.13 // indirect
@@ -14,7 +16,8 @@ require (
 	github.com/pkg/errors v0.8.1
 	github.com/prometheus/client_golang v1.0.0
 	github.com/prometheus/common v0.4.1
-	github.com/prometheus/prometheus v0.0.0-20190627184821-06bdaf076f3d
+	github.com/prometheus/prometheus v2.11.0+incompatible
+	github.com/prometheus/tsdb v0.9.1
 	github.com/samuel/go-zookeeper v0.0.0-20180130194729-c4fab1ac1bec // indirect
 	golang.org/x/net v0.0.0-20190403144856-b630fd6fe46b
 	golang.org/x/oauth2 v0.0.0-20190523182746-aaccbc9213b0 // indirect
