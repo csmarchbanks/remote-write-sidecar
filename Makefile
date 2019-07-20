@@ -1,7 +1,7 @@
 GO111MODULE ?= on
 GOOPTS := -mod=vendor
 DOCKER_REPO ?= quay.io/csmarchbanks/remote-write-sidecar
-DOCKER_TAG ?= latest
+DOCKER_TAG ?= $(shell git rev-parse --abbrev-ref HEAD)-$(shell date -u +"%Y-%m-%d")-$(shell git rev-parse --short HEAD)
 
 all: vendor build test
 
